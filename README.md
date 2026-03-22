@@ -4,4 +4,4 @@ screnshot: grim, slurp, \
 terminal: foot, \
 bar: waybar, \
 launcher: rofi, \
-wm: mangowm, \
+wm: mangowm, 
