@@ -1,5 +1,6 @@
 # .dotfiles
 apps: \
+\
 screnshot: grim, slurp, \
 terminal: foot, \
 bar: waybar, \
