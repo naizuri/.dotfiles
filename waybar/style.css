@@ -1,0 +1,42 @@
+@define-color bg0    #24273a;
+@define-color bg1    #181926;
+@define-color fg     #cad3f5;
+@define-color fg1    #8087a2;
+@define-color accent #ee99a0;
+
+* {
+    all: unset;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+tooltip {
+    background-color: @bg1;
+    color: @fg;
+    margin: 10px;
+}
+
+.modules-center {
+    background-color: @bg0;
+    color: @fg;
+    padding: 6px 8px;
+}
+
+#clock {
+    font-weight: 500;
+}
+
+#workspaces {
+    background-color: @bg0;
+}
+
+#workspaces button {
+    padding: 0 3px;
+    background-color: @bg0;
+    color: @fg1;
+    
+}
+
+#workspaces button.active {
+    background-color: @bg0;
+    color: @accent;
+}
