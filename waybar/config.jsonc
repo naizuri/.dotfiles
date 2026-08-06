@@ -5,8 +5,9 @@
     "margin-top":0,
 
     "modules-center": [
-	"mpris",
+
 	"clock",
+	"mpris",
 	"custom/sep",
 	"ext/workspaces",
 	"dwl/window#layout",
@@ -37,16 +38,8 @@
     },
     "pulseaudio": {
     	"format": "{volume}% {icon}",
-    	"format-bluetooth": "{volume}% {icon}",
     	"format-muted": "Muted  ",
     	"format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": " ",
-            "phone-muted": " ",
-            "portable": " ",
-            "car": " ",
             "default": [" ", " "]
         },
         "scroll-step": 1,
@@ -76,30 +69,36 @@
 	"max-length": 50
     },
     "battery": {
+	"interval": 60,
     	"format": "{capacity}% {icon}",
-	"format-plugged":"{capacity}% {icon}  ",
-    	"format-icons": [" ", " ", " ", " ", " "],
-    	"max-length": 25
+    	"format-icons": {
+		"default": [" ", " ", " ", " ", " "],
+		"charging": [" "]
+
+	}
     },
     "memory":{
 	"format": "{percentage}%  "
     },
     "cpu":{
-	"format": "{usage}% 󰍛 ",
+	"format": "{usage}%  ",
 	"tooltip": false
     },
 "mpris": {
-	"format": "{player_icon} {artist} - {title} |",
-	"format-paused": "{status_icon} <i>{artist} - {title}</i> |",
+	"format": "| {player_icon}  {status_icon} {title} - {artist}",
+	"format-paused": "| {player_icon}  {status_icon} <i>{title} - {artist}</i>",
+	"max-length": 45,
 	"player-icons": {
 		"default": "▶",
-		"mpv": "🎵"
+		"mpv": "🎵",
+		"spotify": ""
 	},
 	"status-icons": {
+		"playing": "▶",
 		"paused": "⏸"
 	},
 	"ignored-players": ["firefox"]
-  },
+    },
     "custom/sep":{
 	"format": "|",
 	"interval": 0
